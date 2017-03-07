@@ -1,0 +1,22 @@
+$font : #333;
+$title : #333;
+$primary : #356d99;
+$secondary : #0A3348;
+$link : #209AAE;
+$link_hover: darken($link, 10%);
+
+.primary {
+    color: $primary;
+}
+
+.primary-bg {
+    background: $primary;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.secondary-bg {
+    background: $secondary;
+}

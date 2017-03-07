@@ -1,0 +1,22 @@
+### Article Experiment
+This is a base template for displaying single news articles for use in various ENP research experiments. You can see an example of the page at http://thenewsbeat.org/sjn-research/articles/paycheck-to-paycheck-climb.php
+
+### Structure
+The templating structure is manual, but simple. To create a new article, create a new file in /articles/article-data/ and set the PHP $variables you need in the template.
+
+Then, create a new .php file in /articles/ that includes your data file and the article-template.php file.
+
+See /articles/paycheck-to-paycheck-climb.php for an example.
+
+### Commenting
+Comments just log to a file via Javascript, not a database.
+
+### Tracking
+We attempted to track Facebook and Twitter sharing as best as we could. We're tracking click events via Google Analytics on each of the buttons (including the Commenting Buttons).
+
+The only caveat is that once someone clicks to share on Facebook or Twitter, we can't verify that they actually completed the post.
+
+Another project constraint was that we needed to keep them as focused as possible on the article and not let them get distracted into a dive into their social media accounts. We did our best to only allow them to post and then redirect them back to the article.
+
+### Local Set-up
+We're using gulp to compile SASS. Compile however you'd like, but our gulpfile.js is included for use.
