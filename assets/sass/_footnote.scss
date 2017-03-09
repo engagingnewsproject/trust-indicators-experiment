@@ -1,0 +1,59 @@
+.footnote__button {
+    @include no-button;
+    font-size: 0.85rem;
+    position: relative;
+    top: -0.3rem;
+    left: -1px;
+    padding: 0px 1px;
+}
+
+.footnote__content {
+    display: block;
+    color: lighten($font, 8);
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: $spacing__base*0.5 0;
+    margin: 5px 0 10px;
+    font-size: 0.85rem;
+    animation: slideInTop .25s ease-out forwards;
+}
+
+.footnote--closed {
+
+    & + .footnote__content {
+        display: none;
+    }
+
+
+}
+
+.footnote--open {
+    top: -0.15rem;
+
+    & + .footnote__content {
+        animation: slideInTop .45s ease-out forwards;
+    }
+
+    .icon--close {
+        fill: red;
+    }
+}
+
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        height: auto;
+        max-height: 0;
+    }
+    50% {
+        height: auto;
+        max-height: 200px;
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

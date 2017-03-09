@@ -1,21 +1,3 @@
-window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '974623229274971',
-    xfbml      : false,
-    version    : 'v2.5'
-  });
-};
-
-
-
-(function(d, s, id){
- var js, fjs = d.getElementsByTagName(s)[0];
- if (d.getElementById(id)) {return;}
- js = d.createElement(s); js.id = id;
- js.src = "//connect.facebook.net/en_US/sdk.js";
- fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-
 $(document).ready(function(){
 
   $("#submit-comment").click(function(event) {
@@ -80,19 +62,38 @@ $(document).ready(function(){
 
 $(document).ready(function() {
 
-    twttr.ready(function (twttr) {
-        // bind events here
-        twttr.events.bind('tweet', tweetIntentToAnalytics);
-      }
-    );
+    // hide footnotes on load
+    if($('.footnote__button').length) {
+        $('.footnote__button').addClass('footnote--closed');
+    }
 
-    function tweetIntentToAnalytics (intentEvent) {
-      if (!intentEvent) return;
+    // show footnote
+    $('.footnote__button').click(function(e) {
+        e.preventDefault();
+        if($(this).hasClass('footnote--closed')) {
+            footnoteOpen(this);
+        } else {
+            footnoteClosed(this);
+        }
+    });
 
-        var action = $(intentEvent.target).attr('data-action');
-        var label = $(intentEvent.target).attr('data-label');
+    function svgClose() {
+        return '<svg class="icon icon--close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>';
+    }
 
-        ga('send','event', 'Social', action+' - Clicked', label);
+    function footnoteOpen(e) {
+        $(e).removeClass('footnote--closed');
+        $(e).addClass('footnote--open');
+        $(e).html(svgClose());
+
+    }
+
+    function footnoteClosed(e) {
+        $(e).addClass('footnote--closed');
+        $(e).removeClass('footnote--open');
+
+        var footnoteId = $(e).data('footnote-id');
+        $(e).html('<sup>'+footnoteId+'</sup>');
     }
 
     // hide comments on page load
@@ -109,48 +110,9 @@ $(document).ready(function() {
         ga('send','event','Comments', 'Show Comments', label);
     });
 
-    $('.social-share__link--facebook').click(function(e){
-        e.preventDefault();
 
-        var label = $('#user-ip').attr('data-ip');
-        var position = $(this).attr('data-position');
-        var url = $(this).attr('data-url');
 
-        // send the click event
-        ga('send','event', 'Social', 'Facebook Share - '+position+' - Clicked', label);
-        // open the dialog hopefully...
-        FB.ui({
-          method: 'share',
-          href: url,
-        }, function(response){
-            if(response === undefined) {
-                ga('send','event','Social', 'Facebook Share - '+position+' - Closed', label);
-            } else {
-                // success?
-                ga('send','event','Social', 'Facebook Share - '+position+' - Shared', label);
-                ga('send', 'social', 'Facebook', 'Share', url);
-
-            }
-        });
-    });
 
 
 
 });
-
-window.twttr = (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0],
-    t = window.twttr || {};
-  if (d.getElementById(id)) return t;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://platform.twitter.com/widgets.js";
-  fjs.parentNode.insertBefore(js, fjs);
-
-  t._e = [];
-  t.ready = function(f) {
-    t._e.push(f);
-  };
-
-  return t;
-}(document, "script", "twitter-wjs"));

@@ -79,12 +79,6 @@ $mobile: 24rem;
 }
 
 
-/* Clearing */
-[class*="content"],
-[class*="site"] {
-    @extend %clearfix;
-}
-
 body {
     padding-top: 1rem;
 }

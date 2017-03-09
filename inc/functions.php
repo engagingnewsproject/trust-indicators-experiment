@@ -62,4 +62,11 @@ function social_share($id) {
 			</ul>';
 }
 
+/**
+* Output HTML needed for a footnote
+*/
+function footnote($number, $footnotes) {
+	return '<button class="footnote__button" data-footnote-id="'.$number.'"><sup>'.$number.'</sup></button>
+			<span class="footnote__content">'.$footnotes[$number - 1].'</span>';
+}
 ?>

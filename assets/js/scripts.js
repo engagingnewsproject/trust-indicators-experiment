@@ -1,46 +1,38 @@
 $(document).ready(function() {
 
-    /* twttr.ready(function (twttr) {
-        // bind events here
-        twttr.events.bind('tweet', tweetIntentToAnalytics);
-      }
-    );
-
-    function tweetIntentToAnalytics (intentEvent) {
-      if (!intentEvent) return;
-
-        var action = $(intentEvent.target).attr('data-action');
-        var label = $(intentEvent.target).attr('data-label');
-
-        ga('send','event', 'Social', action+' - Clicked', label);
+    // hide footnotes on load
+    if($('.footnote__button').length) {
+        $('.footnote__button').addClass('footnote--closed');
     }
 
-    $('.social-share__link--facebook').click(function(e){
+    // show footnote
+    $('.footnote__button').click(function(e) {
         e.preventDefault();
-
-        var label = $('#user-ip').attr('data-ip');
-        var position = $(this).attr('data-position');
-        var url = $(this).attr('data-url');
-
-        // send the click event
-        ga('send','event', 'Social', 'Facebook Share - '+position+' - Clicked', label);
-        // open the dialog hopefully...
-        FB.ui({
-          method: 'share',
-          href: url,
-        }, function(response){
-            if(response === undefined) {
-                ga('send','event','Social', 'Facebook Share - '+position+' - Closed', label);
-            } else {
-                // success?
-                ga('send','event','Social', 'Facebook Share - '+position+' - Shared', label);
-                ga('send', 'social', 'Facebook', 'Share', url);
-
-            }
-        });
+        if($(this).hasClass('footnote--closed')) {
+            footnoteOpen(this);
+        } else {
+            footnoteClosed(this);
+        }
     });
 
-    */
+    function svgClose() {
+        return '<svg class="icon icon--close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg>';
+    }
+
+    function footnoteOpen(e) {
+        $(e).removeClass('footnote--closed');
+        $(e).addClass('footnote--open');
+        $(e).html(svgClose());
+
+    }
+
+    function footnoteClosed(e) {
+        $(e).addClass('footnote--closed');
+        $(e).removeClass('footnote--open');
+
+        var footnoteId = $(e).data('footnote-id');
+        $(e).html('<sup>'+footnoteId+'</sup>');
+    }
 
     // hide comments on page load
     if($('.comments-section').length) {
@@ -55,6 +47,8 @@ $(document).ready(function() {
         // send to google
         ga('send','event','Comments', 'Show Comments', label);
     });
+
+
 
 
 
