@@ -29,7 +29,7 @@ function get_the_ip() {
 function svg($name, $options = array('title'=>false,'class'=>false)) {
 
 	return
-'<svg class="icon icon-'.$name. ($options['class'] != false ? ' '. $options['class']  : '').'">'.($options['title'] != false ? '<title>'.$options['title'].'</title>' : '').'<use xlink:href="#'.$name.'" /></svg>';
+'<svg class="icon icon--'.$name. ($options['class'] != false ? ' '. $options['class']  : '').'">'.($options['title'] != false ? '<title>'.$options['title'].'</title>' : '').'<use xlink:href="#'.$name.'" /></svg>';
 }
 
 

@@ -1,9 +1,9 @@
 // IF NEED IE ONLY STYLESHEET
 // SeT THIS IN IE.SCSS
 $fix-mqs: false !default;
-$desktop: 48em;
-$tablet: 34em;
-$mobile: 24em;
+$desktop: 48rem;
+$tablet: 34rem;
+$mobile: 24rem;
 
 @mixin media($width) {
     // If we're outputting for a fixed media query set...
@@ -29,13 +29,13 @@ $mobile: 24em;
 }
 
 @mixin tablet-only {
-  @media (min-width: $tablet) and (max-width: $desktop - .01em) {
+  @media (min-width: $tablet) and (max-width: $desktop - .01rem) {
     @content;
   }
 }
 
 @mixin everything-but-desktop {
-  @media (max-width: $desktop - .01em) {
+  @media (max-width: $desktop - .01rem) {
     @content;
   }
 }
@@ -85,3 +85,6 @@ $mobile: 24em;
     @extend %clearfix;
 }
 
+body {
+    padding-top: 1rem;
+}

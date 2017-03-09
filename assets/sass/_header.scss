@@ -1,0 +1,50 @@
+header[role="banner"] {
+    margin-bottom: $spacing__base * 0.5;
+}
+
+.site-title {
+    font-size: 1.15rem;
+    border-bottom: 2px solid $font;
+}
+
+.trust-project {
+    margin: $spacing__base * 1.5 $spacing__base $spacing__base/2 ;
+
+    a {
+
+        .trust-project__title {
+            color: $link;
+        }
+
+        .icon {
+            fill: $link;
+        }
+
+        &:hover {
+            .trust-project__title {
+                color: $link_hover;
+            }
+
+            .icon {
+                fill: $link_hover;
+            }
+        }
+    }
+}
+
+.trust-project__title {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    width: 20px;
+    margin: 0;
+    position: relative;
+    top: 8px;
+}
+
+.icon--trust-project {
+    font-size: 2.2rem;
+    float: left;
+    margin-right: $spacing__base / 4;
+    top: 0;
+}

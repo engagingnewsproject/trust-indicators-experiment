@@ -1,0 +1,84 @@
+article {
+    margin: 0 $spacing__base;
+}
+
+.article__header {
+    margin-bottom: 1rem;
+}
+
+.article__title {
+    font-size: 1.8rem;
+
+    @include media($tablet) {
+        font-size: 2.4rem;
+    }
+}
+
+.byline {
+    text-align: center;
+    color: lighten($font, 12.5);
+}
+
+.byline__category {
+    color: #000;
+}
+
+.byline__button {
+    @include no-button;
+}
+
+.author {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    @include no-button;
+}
+
+.author__name {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.author__image {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin-bottom: $spacing__base * 0.2;
+}
+
+.article-img {
+    display: block;
+    margin: 0 auto 2rem;
+
+    @include media($tablet) {
+        max-width: 150%;
+        margin-left: -15%;
+    }
+}
+
+.article-img--featured {
+    margin-top: $spacing__base;
+    margin-bottom: 4rem;
+}
+
+.byline {
+    font-size: .75rem;
+    margin-bottom: $spacing__base * 0.6;
+}
+
+.behind-the-story {
+    margin: $spacing__base * 2 0;
+
+    .behind-the-story__title {
+        font-size: 1.4rem;
+        border-bottom: 1px solid #bbb;
+        margin-bottom: $spacing__base;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+}

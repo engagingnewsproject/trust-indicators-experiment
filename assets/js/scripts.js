@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    twttr.ready(function (twttr) {
+    /* twttr.ready(function (twttr) {
         // bind events here
         twttr.events.bind('tweet', tweetIntentToAnalytics);
       }
@@ -14,20 +14,6 @@ $(document).ready(function() {
 
         ga('send','event', 'Social', action+' - Clicked', label);
     }
-
-    // hide comments on page load
-    if($('.comments-section').length) {
-        $('.comments-section').hide();
-    }
-
-    $('.show-comments').click(function(e){
-        e.preventDefault();
-        $('.show-comments-wrap').remove();
-        $('.comments-section').fadeIn();
-        var label = $('#user-ip').attr('data-ip');
-        // send to google
-        ga('send','event','Comments', 'Show Comments', label);
-    });
 
     $('.social-share__link--facebook').click(function(e){
         e.preventDefault();
@@ -53,6 +39,23 @@ $(document).ready(function() {
             }
         });
     });
+
+    */
+
+    // hide comments on page load
+    if($('.comments-section').length) {
+        $('.comments-section').hide();
+    }
+
+    $('.show-comments').click(function(e){
+        e.preventDefault();
+        $('.show-comments-wrap').remove();
+        $('.comments-section').fadeIn();
+        var label = $('#user-ip').attr('data-ip');
+        // send to google
+        ga('send','event','Comments', 'Show Comments', label);
+    });
+
 
 
 

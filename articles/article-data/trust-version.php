@@ -2,9 +2,11 @@
 $identifier = 'truth';
 $title = 'Paycheck To Paycheck: How The Poor Struggle To Climb Out Of Cash-Flow Crises';
 $author = 'Jim Phipps';
-$pubdate = 'OCT. 23, 2015';
+$author_image = '../dist/img/author-image.jpg';
+$pubdate = 'Oct. 23, 2016';
+$article_category = 'News Analysis';
 $featured_img = '../dist/img/payday-loans.jpg';
-$article = '<p><span class="dropcap">S</span>herry Williams thought she had her spending perfectly, if precariously, planned out.</p>
+$article = '<p>WASHINGTON &mdash; Sherry Williams thought she had her spending perfectly, if precariously, planned out.</p>
 <p>Williams, who runs a child-care business, didn&#8217;t want her kids to go without for the holidays, so she got a credit card at Toys&#8221;R&#8221;Us that gave her 10 percent off. She planned to pay off the card the very next month when her tax refund came. But then her car broke down. She had to use the tax return to fix the car, and then she couldn&#8217;t pay down the credit card.</p>
 <p>Something like a broken transmission, which might be an inconvenience for a middle-class family, can quickly become a crisis for low-income working moms like Williams, who are unlikely to have savings to fall back on.</p>
 <p>Financial coach Robin McKinney first met Williams, whose last name has been changed to protect her privacy, when her car was in need of repair. McKinney is co-founder of Maryland CASH Campaign in Baltimore, a nonprofit that belongs to a statewide coalition offering tax preparation and financial coaching services to low-income families. Establishing savings for emergencies is a goal for most of McKinney’s clients.</p>

@@ -1,0 +1,45 @@
+
+
+.center {
+    text-align: center;
+}
+
+.well {
+    padding: 1rem;
+    background: #f5f5f5;
+    border-bottom: 2px solid #ddd;
+
+    *:last-child {
+        margin-bottom: 0.2rem;
+    }
+}
+
+.alert {
+    padding: 1rem;
+    font-size: .8rem;
+    font-family: $sansSerif;
+    background: #ddd;
+}
+
+.alert-success {
+    background: #D5EBCE;
+}
+
+.alert-error {
+    background: #FCDCDC;
+}
+
+@mixin no-button {
+    color: $link;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: $fontBody;
+
+    &:hover {
+        color: $link_hover;
+        background: none;
+        border: none;
+    }
+}
