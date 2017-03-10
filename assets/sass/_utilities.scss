@@ -43,3 +43,46 @@
         border: none;
     }
 }
+
+@mixin accordion($root) {
+
+    .#{$root}__button {
+        @include no-button;
+        font-size: 0.85rem;
+    }
+
+    .#{$root}__content {
+        display: block;
+        color: lighten($font, 8);
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: $spacing__base*0.5 0;
+        margin: 5px 0 10px;
+        font-size: 0.85rem;
+        animation: slideInTop .25s ease-out forwards;
+    }
+
+    .#{$root}--closed {
+        & + .#{$root}__content {
+            display: none;
+        }
+    }
+
+    .#{$root}--open {
+
+        & + .#{$root}__content {
+            animation: slideInTop .45s ease-out forwards;
+        }
+
+        .icon--close {
+            fill: red;
+        }
+    }
+
+}
+
+.long-page-nav {
+    font-size: 0.9rem;
+    margin-top: -$spacing__base * 0.5;
+    margin-bottom: $spacing__base * 1.5;
+}

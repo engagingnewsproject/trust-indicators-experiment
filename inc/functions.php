@@ -69,4 +69,25 @@ function footnote($number, $footnotes) {
 	return '<button class="footnote__button" data-footnote-id="'.$number.'"><sup>'.$number.'</sup></button>
 			<span class="footnote__content">'.$footnotes[$number - 1].'</span>';
 }
+
+/**
+* An internal navigation used on the About the Trust Project page
+*/
+function internal_nav() {
+	return '<nav class="long-page-nav"><a href="#table-of-contents">Return to Table of Contents</a> | <a href="'.get_referral_url().'">Go Back to the Article</a></nav>';
+}
+
+/**
+* Get previous referrer from URL Param
+* @return string (/root/path/previous-page-url/)
+*/
+function get_referral_url() {
+	$referrer = '';
+	if($_GET['referrer'] && !empty($_GET['referrer'])) {
+		// process the url into a cleaner string
+		$url = urldecode($_GET['referrer']);
+		$referrer = $url;
+	}
+	return $referrer;
+}
 ?>

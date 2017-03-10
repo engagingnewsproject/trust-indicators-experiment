@@ -8,7 +8,14 @@ header[role="banner"] {
 }
 
 .trust-project {
-    margin: $spacing__base * 1.5 $spacing__base $spacing__base/2 ;
+
+    margin-left: $spacing__base * 1.5 0 $spacing__base/2;
+
+    @include media($tablet) {
+        margin-left: $spacing__base;
+        margin-right: $spacing__base;
+    }
+
 
     a {
 
@@ -39,7 +46,7 @@ header[role="banner"] {
     width: 20px;
     margin: 0;
     position: relative;
-    top: 8px;
+    top: 0.65em;
 }
 
 .icon--trust-project {
@@ -47,4 +54,18 @@ header[role="banner"] {
     float: left;
     margin-right: $spacing__base / 4;
     top: 0;
+}
+
+.about-trust-project {
+    .article__header {
+        margin-top: $spacing__base;
+    }
+    
+    .icon--trust-project {
+        font-size: 2.8rem;
+    }
+
+    .trust-project__title {
+        font-size: 0.9rem;
+    }
 }

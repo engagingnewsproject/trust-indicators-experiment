@@ -1,0 +1,75 @@
+
+@include accordion('author');
+
+.author {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 2px $spacing__base ;
+}
+
+.author__name {
+    font-size: 0.8rem;
+    margin: 0;
+    position: relative;
+}
+
+.author__image {
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin-bottom: $spacing__base * 0.2;
+}
+
+.author--open {
+    .icon--close {
+        position: absolute;
+        width: 1.15rem;
+        height: 1.15rem;
+        top: -0.05rem;
+    }
+}
+
+.author__content {
+
+    @include media($tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    p, ul {
+        font-size: 0.85rem;
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    h4 {
+        margin-top: 0;
+        font-size: 1rem;
+    }
+}
+
+.author__facts {
+    @include media($tablet) {
+        width: 30%;
+        margin-left: 6%;
+    }
+
+    p {
+        margin-bottom: $spacing__base/2;
+    }
+
+}
+
+.author__bio {
+    margin-bottom: $spacing__base / 2;
+
+    @include media($tablet) {
+        width: 64%;
+        margin-bottom: 0;
+    }
+}
