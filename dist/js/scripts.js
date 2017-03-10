@@ -64,9 +64,9 @@ $(document).ready(function() {
     var closedElements = ['footnote', 'byline', 'author'];
 
     // add in learn more byline button
-    $('.byline__category').after('<button id="bylineBtn" id="bylineBtn" class="byline__button">Learn More</button>');
-    $('.byline__content').append('<button data-btn-id="bylineBtn" class="accordion__second-close">'+svgClose()+' Close Section</button>');
-    $('.author__content').append('<button data-btn-id="authorBtn" class="accordion__second-close">'+svgClose()+' Close Section</button>');
+    $('.byline__category').after('<button class="byline__button">Learn More</button>');
+    $('.byline__content').append('<button class="byline__second-close accordion__second-close">'+svgClose()+' Close Section</button>');
+    $('.author__content').append('<button class="author__second-close accordion__second-close">'+svgClose()+' Close Section</button>');
 
     for(var i = 0; i < closedElements.length; i++) {
         // hide closedElements on load
@@ -83,12 +83,18 @@ $(document).ready(function() {
         'content': '',
     };
 
+    $('.author__button').data('btn', authorBtn);
+    $('.author__second-close').data('btn', authorBtn);
+
     var bylineBtn = {
         'button': $('.byline__button'),
         'replaceButton': true,
         'closeLocation': $('.byline__button'),
         'content': 'Learn More',
     };
+
+    $('.byline__button').data('btn', bylineBtn);
+    $('.byline__second-close').data('btn', bylineBtn);
 
     var footnoteBtn = {
         'button': '',
@@ -97,10 +103,9 @@ $(document).ready(function() {
         'content': '',
     };
 
-    // show footnote
-    $('.footnote__button').click(function(e) {
-        e.preventDefault();
 
+    // loop through footnotes and create their variables
+    $('.footnote__button').each(function(i) {
         var footnoteId = $(this).data('footnote-id');
 
         footnoteBtn = {
@@ -110,8 +115,23 @@ $(document).ready(function() {
             'closeLocation': $(this),
         };
 
-        process_accordion(footnoteBtn);
+        // assign the data to the button
+        $(this).data('btn', footnoteBtn);
     });
+
+
+    // show footnote
+    /*$('.footnote__button').click(function(e) {
+        e.preventDefault();
+
+        var footnoteBtn = $(this).data('btn');
+        console.log(footnoteBtn);
+        if(footnoteBtn.button) {
+            process_accordion(footnoteBtn);
+        }
+
+
+    });*/
 
     // show byline
     /*$(document).on('click', '.byline__button', function(e) {
@@ -168,17 +188,13 @@ $(document).ready(function() {
 
     $(document).on('click', '.accordion__button', function(e) {
         e.preventDefault();
-        var btnId = $(this).attr('id');
-        // get access to the global btn variable
-        btn = eval(btnId);
+        var btn = $(this).data('btn');
         process_accordion(btn);
     });
 
     $(document).on('click', '.accordion__second-close', function(e) {
         e.preventDefault();
-        var btnId = $(this).data('btn-id');
-        // get access to the global btn variable
-        btn = eval(btnId);
+        var btn = $(this).data('btn');
         process_accordion(btn);
         // move them to the location of the closed section
         moveToBtn(btn);

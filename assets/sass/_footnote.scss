@@ -17,8 +17,9 @@
     }
 
     &.accordion--open {
-        top: -0.15rem;
         background: rgba(0,0,0,.05);
+        transform: translateY(0.25rem);
+        z-index: 999;
     }
 
     &.accordion--closed {
