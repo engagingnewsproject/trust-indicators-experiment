@@ -1,6 +1,6 @@
 <main id="content" class="container" role="main">
     <aside class="trust-project">
-        <a href="about-trust-project.php?referrer=<?php echo urlencode(get_current_url());?>">
+        <a href="../about-the-trust-project/?referrer=<?php echo urlencode(get_current_url());?>">
             <?php echo svg('trust-project');?>
             <h4 class="trust-project__title">Trust Project</h4>
         </a>

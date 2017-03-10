@@ -17,7 +17,7 @@
     <meta property="og:url" content="<? echo $current_url;?>"/>
     <meta property="og:description" content="<? echo strip_tags(substr($article,0,240))?>&hellip;" />
 
-    <link rel="stylesheet" href="../dist/css/styles.min.css" />
+    <link rel="stylesheet" href="../../dist/css/styles.min.css" />
     <!-- Typekit Fonts -->
     <script src="https://use.typekit.net/rca2zto.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -39,5 +39,5 @@
 
   <div id="user-ip" class="hidden" data-ip="<? echo $user_ip;?>"></div>
   <div class="screen-reader-text" style="position: absolute; width: 0; height: 0;">
-      <?php include('../dist/svg/svg.svg');?>
+      <?php include('../../dist/svg/svg.svg');?>
   </div>

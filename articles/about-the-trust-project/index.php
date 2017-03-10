@@ -1,7 +1,7 @@
 <?php
-include ('../inc/functions.php');
-include('includes/head.php');
-include('includes/header.php');
+include ('../../inc/functions.php');
+include('../includes/head.php');
+include('../includes/header.php');
 ?>
 
 <main id="content" class="container about-trust-project" role="main">
