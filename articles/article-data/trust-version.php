@@ -4,7 +4,7 @@ $title = 'Paycheck To Paycheck: How The Poor Struggle To Climb Out Of Cash-Flow 
 $author = 'Jim Phipps';
 $author_image = '../dist/img/author-image.jpg';
 $pubdate = 'Oct. 23, 2016';
-$article_category = 'News Analysis';
+$article_category = 'News';
 $featured_img = '../dist/img/payday-loans.jpg';
 $footnotes = array(
                     'A nonprofit that belongs to a statewide coalition offering tax preparation and financial coaching services to low-income families. Establishing savings for emergencies is a goal for most of McKinney’s clients.',

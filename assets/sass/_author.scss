@@ -51,6 +51,10 @@
         margin-top: 0;
         font-size: 1rem;
     }
+
+    .accordion__second-close {
+        margin-top: $spacing__base/2;
+    }
 }
 
 .author__facts {
@@ -72,4 +76,5 @@
         width: 64%;
         margin-bottom: 0;
     }
+
 }

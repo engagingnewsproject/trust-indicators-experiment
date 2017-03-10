@@ -62,27 +62,36 @@
         animation: slideInTop .25s ease-out forwards;
     }
 
-    .#{$root}--closed {
-        & + .#{$root}__content {
-            display: none;
-        }
+}
+
+.accordion--closed {
+    & + .accordion__content {
+        display: none;
+    }
+}
+
+.accordion--open {
+
+    & + .accordion__content {
+        animation: slideInTop .45s ease-out forwards;
     }
 
-    .#{$root}--open {
-
-        & + .#{$root}__content {
-            animation: slideInTop .45s ease-out forwards;
-        }
-
-        .icon--close {
-            fill: red;
-        }
+    .icon--close {
+        fill: red;
     }
-
 }
 
 .long-page-nav {
     font-size: 0.9rem;
     margin-top: -$spacing__base * 0.5;
     margin-bottom: $spacing__base * 1.5;
+}
+
+.accordion__second-close {
+    @include no-button;
+
+    .icon--close {
+        fill: red;
+        top: .25em;
+    }
 }
