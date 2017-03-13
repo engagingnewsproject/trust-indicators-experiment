@@ -30,7 +30,7 @@
     <?php
     // only show analytics if not on dev
     if(!strpos($current_url, '://dev') && !strpos($current_url, '://localhost')) :
-        include('includes/google-analytics.php');
+        include('google-analytics.php');
     endif;?>
 
 </head>

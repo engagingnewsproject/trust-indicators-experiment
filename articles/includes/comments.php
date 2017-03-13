@@ -1,14 +1,14 @@
 <? if(!empty($comments)) {?>
-    <div class="show-comments-wrap"><a class="show-comments btn" href="#">Show Comments</a></div>
+    <div class="show-comments-wrap"><button class="btn show-comments">Show Comments</button></div>
     <section class="comments-section">
         <h2 class="comment-section-title">Comments</h2>
         <ul class="comments">
         <? foreach($comments as $comment) {?>
             <li class="comment">
-                <p class="comment-info">
+                <h4 class="comment-info">
                     <span class="comment-name"><? echo $comment['name'];?></span>
                     <span class="comment-time"><? echo $comment['time'];?></span>
-                </p>
+                </h4>
                 <div class="comment-content">
                     <? echo $comment['comment'];?>
                 </div>

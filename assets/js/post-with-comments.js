@@ -36,7 +36,7 @@ $(document).ready(function(){
     //10.1.1.1|nov 14th 5pm|comment|this is a new comment|john doe
     $.ajax({
 			type: "POST",
-			url: "../inc/log-comment.php",
+			url: "../../inc/log-comment.php",
 			dataType: "json",
 			data: { comment : comment,  name : name, identifier : identifier }
 		})

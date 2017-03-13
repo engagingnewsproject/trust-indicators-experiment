@@ -36,7 +36,7 @@ $(document).ready(function(){
     //10.1.1.1|nov 14th 5pm|comment|this is a new comment|john doe
     $.ajax({
 			type: "POST",
-			url: "../inc/log-comment.php",
+			url: "../../inc/log-comment.php",
 			dataType: "json",
 			data: { comment : comment,  name : name, identifier : identifier }
 		})
@@ -118,32 +118,6 @@ $(document).ready(function() {
         // assign the data to the button
         $(this).data('btn', footnoteBtn);
     });
-
-
-    // show footnote
-    /*$('.footnote__button').click(function(e) {
-        e.preventDefault();
-
-        var footnoteBtn = $(this).data('btn');
-        console.log(footnoteBtn);
-        if(footnoteBtn.button) {
-            process_accordion(footnoteBtn);
-        }
-
-
-    });*/
-
-    // show byline
-    /*$(document).on('click', '.byline__button', function(e) {
-        e.preventDefault();
-        process_accordion(bylineBtn);
-    });
-
-    // show author
-    $('.author__button').click(function(e) {
-        e.preventDefault();
-        process_accordion(authorBtn);
-    });*/
 
     function process_accordion(btn) {
         if(btn.button.hasClass('accordion--closed')) {

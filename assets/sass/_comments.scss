@@ -17,7 +17,6 @@
 
     .comment-section-title {
         font-size: 1rem;
-        text-transform: uppercase;
         border-bottom: 2px solid $font;
     }
 
@@ -37,7 +36,7 @@
     }
 
     .comment-info {
-        font-family: $sansSerif;
+        font-family: $fontBody;
         font-size: .8rem;
         margin-bottom: 0;
     }
@@ -60,7 +59,6 @@
 
     .add-comment-title {
         font-size: 1rem;
-        text-transform: uppercase;
         border-bottom: 2px solid $font;
     }
 

@@ -121,7 +121,7 @@ img {
 
 label {
     display: block;
-    font-family: $sansSerif;
+    font-family: $fontBody;
     font-size: .75rem;
 }
 
@@ -178,14 +178,19 @@ article h3 {
 }
 
 .btn {
-    padding: .8rem 1.4rem;
     color: #fff;
     background: $font;
-    text-transform: uppercase;
+    border: none;
+    font-size: .85rem;
+    font-family: $fontBody;
+    cursor: pointer;
+    padding: .75rem $spacing__base;
     transition: all .2s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
+    border: none;
     color: #fff;
     background: darken($font, 10);
 }
@@ -193,12 +198,4 @@ article h3 {
 .btn:active {
     color: #fff;
     background: lighten($font, 10);
-}
-
-.btn-submit {
-    border: none;
-    font-size: .85rem;
-    font-family: $fontBody;
-    cursor: pointer;
-    padding: .75rem $spacing__base;
 }

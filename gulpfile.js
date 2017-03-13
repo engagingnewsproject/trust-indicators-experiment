@@ -22,24 +22,24 @@ gulp.task('serve', ['sass', 'js', 'compressImg', 'svgstore'], function() {
         proxy: "dev/trust-project"
     });
     // Watch SCSS file for change to pass on to sass compiler,
-    gulp.watch('../assets/sass/*.{scss,sass}', ['sass']);
+    gulp.watch('assets/sass/*.{scss,sass}', ['sass']);
     // Watch SCSS file for change to pass on to sass compiler,
-    gulp.watch('../assets/js/*.js', ['js']);
+    gulp.watch('assets/js/*.js', ['js']);
     // run img compression when images added to directory
-    gulp.watch('../assets/img/*.*', ['compressImg']);
+    gulp.watch('assets/img/*.*', ['compressImg']);
     // run SVG when svg files added
-    gulp.watch('../assets/svg/*.svg', ['svgstore']);
+    gulp.watch('assets/svg/*.svg', ['svgstore']);
     // Watch our CSS file and reload when it's done compiling
-    gulp.watch("../dist/css/*.css").on('change', reload);
+    gulp.watch("dist/css/*.css").on('change', reload);
     // Watch php file
     gulp.watch("../*/*.php").on('change', reload);
     // watch javascript files
-    gulp.watch("../dist/js/*.js").on('change', reload);
+    gulp.watch("dist/js/*.js").on('change', reload);
 });
 
 gulp.task('svgstore', function () {
     return gulp
-        .src('../assets/svg/*.svg')
+        .src('assets/svg/*.svg')
         .pipe(svgmin(function (file) {
             var prefix = path.basename(file.relative, path.extname(file.relative));
             return {
@@ -52,7 +52,7 @@ gulp.task('svgstore', function () {
             };
         }))
         .pipe(svgstore({ inlineSvg: true }))
-        .pipe(gulp.dest('../dist/svg/'));
+        .pipe(gulp.dest('dist/svg/'));
 });
 
 /* gulp.task('sass', function () {
@@ -80,8 +80,8 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function() {
-    var jsFiles = '../assets/js/*.js',
-    jsDest = '../dist/js';
+    var jsFiles = 'assets/js/*.js',
+    jsDest = 'dist/js';
 
     return gulp.src(jsFiles)
         .pipe(concat('scripts.js'))
@@ -92,9 +92,9 @@ gulp.task('js', function() {
 });
 
 function compressJS(filename) {
-    rootPath = "../assets/js/";
-    src = "../assets/js/"+filename+".js";
-    dist = '../dist/js/';
+    rootPath = "assets/js/";
+    src = "assets/js/"+filename+".js";
+    dist = 'dist/js/';
 
     return gulp.src(src)
         .pipe(uglify())
@@ -105,14 +105,14 @@ function compressJS(filename) {
 }
 
 gulp.task('compressImg', function() {
-    return gulp.src('../assets/img/*')
+    return gulp.src('assets/img/*')
             .pipe(imagemin())
-            .pipe(gulp.dest('../dist/img'));
+            .pipe(gulp.dest('dist/img'));
 });
 
 
 function processSASS(filename) {
-    return gulp.src('../assets/sass/'+filename+'.{scss,sass}')
+    return gulp.src('assets/sass/'+filename+'.{scss,sass}')
       // Converts Sass into CSS with Gulp Sass
       .pipe(sass({
         errLogToConsole: true
@@ -128,7 +128,7 @@ function processSASS(filename) {
         suffix: '.min'
       }))
       // Outputs CSS files in the css folder
-      .pipe(gulp.dest('../dist/css/'));
+      .pipe(gulp.dest('dist/css/'));
 }
 
 // Creating a default task

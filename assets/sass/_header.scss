@@ -9,7 +9,7 @@ header[role="banner"] {
 
 .trust-project {
 
-    margin-left: $spacing__base * 1.5 0 $spacing__base/2;
+    margin: $spacing__base 0 $spacing__base/2;
 
     @include media($tablet) {
         margin-left: $spacing__base;
@@ -60,7 +60,7 @@ header[role="banner"] {
     .article__header {
         margin-top: $spacing__base;
     }
-    
+
     .icon--trust-project {
         font-size: 2.8rem;
     }

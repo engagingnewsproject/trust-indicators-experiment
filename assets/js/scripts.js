@@ -57,32 +57,6 @@ $(document).ready(function() {
         $(this).data('btn', footnoteBtn);
     });
 
-
-    // show footnote
-    /*$('.footnote__button').click(function(e) {
-        e.preventDefault();
-
-        var footnoteBtn = $(this).data('btn');
-        console.log(footnoteBtn);
-        if(footnoteBtn.button) {
-            process_accordion(footnoteBtn);
-        }
-
-
-    });*/
-
-    // show byline
-    /*$(document).on('click', '.byline__button', function(e) {
-        e.preventDefault();
-        process_accordion(bylineBtn);
-    });
-
-    // show author
-    $('.author__button').click(function(e) {
-        e.preventDefault();
-        process_accordion(authorBtn);
-    });*/
-
     function process_accordion(btn) {
         if(btn.button.hasClass('accordion--closed')) {
             accordionOpen(btn.button);
