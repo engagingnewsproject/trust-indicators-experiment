@@ -74,7 +74,7 @@ function footnote($number, $footnotes) {
 * An internal navigation used on the About the Trust Project page
 */
 function internal_nav() {
-	return '<nav class="long-page-nav"><a href="#table-of-contents">Return to Table of Contents</a> | <a href="'.get_referral_url().'">Go Back to the Article</a></nav>';
+	return '<nav class="long-page-nav"><a href="#table-of-contents">Return to Trust Indicators</a> | <a href="'.get_referral_url().'">Go Back to the Article</a></nav>';
 }
 
 /**

@@ -28,7 +28,7 @@
         <? echo $article;?>
 
         <?php
-        if($identifier === 'truth') {
+        if($identifier === 'trust') {
             include('behind-the-story.php');
         }
 

@@ -1,5 +1,6 @@
 <?php
 include ('../../inc/functions.php');
+include ('data.php');
 include('../includes/head.php');
 include('../includes/header.php');
 ?>
@@ -12,21 +13,22 @@ include('../includes/header.php');
             <h1 class="article__title">About the Trust Project</h1>
         </header>
 
-        <p>The Trust Project is a collaboration between academics and journalists. Its goal is to create strategies that fulfill journalism’s basic pledge: <strong>to serve society with a truthful, intelligent and comprehensive account of ideas and events</strong>. To that end, The News Beat adheres to a set of best practices and policies as outlined by the Trust Project.</p>
+        <p>The Trust Project is a collaboration between academics and journalists. Its goal is to create strategies that fulfill journalism’s basic pledge: <strong>to serve society with a truthful, intelligent and comprehensive account of ideas and events</strong>.</p>
 
-        <nav class="long-page-nav"><a href="<?php echo get_referral_url();?>">Go Back to the Article</a></nav>
+        <p>The Trust Project uses six trust indicators to evaluate the trustworthiness of a news organization. The News Beat adheres to all of them:</p>
 
-        <nav id="table-of-contents">
-            <h3>Table of Contents</h3>
-            <ul>
-                <li><a href="#ethics">Ethics­</a></li>
-                <li><a href="#fact">Fact-checking</a></li>
-                <li><a href="#ownership">Ownership structure­</a></li>
-                <li><a href="#diversity">Diversity</a></li>
-                <li><a href="#corrections">Corrections­</a></li>
-                <li><a href="#editorial">Editorial independence­</a></li>
+        <nav id="table-of-contents" class="trust-indicators">
+            <ul class="checklist">
+                <li><?php echo svg('check');?><a href="#ethics">Ethics­</a></li>
+                <li><?php echo svg('check');?><a href="#fact">Fact-checking</a></li>
+                <li><?php echo svg('check');?><a href="#ownership">Ownership structure­</a></li>
+                <li><?php echo svg('check');?><a href="#diversity">Diversity</a></li>
+                <li><?php echo svg('check');?><a href="#corrections">Corrections­</a></li>
+                <li><?php echo svg('check');?><a href="#editorial">Editorial independence­</a></li>
             </ul>
         </nav>
+
+        <nav class="long-page-nav"><a href="<?php echo get_referral_url();?>">Go Back to the Article</a></nav>
 
         <h3 id="ethics">Ethics Statement</h3>
         <p>At The News Beat, we believe that public enlightenment is the forerunner of justice and the foundation of democracy. Ethical journalism strives to ensure the free exchange of information that is accurate, fair and thorough. An ethical journalist acts with integrity. We declare the following four principles as the foundation of ethical journalism and encourages their use in its practice by everyone who works for The News Beat:</p>
@@ -82,4 +84,4 @@ include('../includes/header.php');
     </article>
 </main>
 
-<?php include('includes/footer.php');?>
+<?php include('../includes/footer.php');?>

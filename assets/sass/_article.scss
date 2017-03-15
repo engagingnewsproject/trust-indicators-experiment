@@ -29,7 +29,7 @@ article {
 
 .article-img--featured {
     margin-top: $spacing__base;
-    
+
     @include media($tablet) {
         margin-bottom: $spacing__base * 2;
     }
@@ -53,4 +53,9 @@ article {
         font-size: 1.15rem;
     }
 
+}
+
+.trust-indicators {
+    margin-bottom: $spacing__base;
+    border-bottom: 1px solid #000;
 }
