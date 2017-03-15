@@ -25,6 +25,18 @@ $article = '<p>SAN ANTONIO &mdash; In less than 30 years, whites will no longer 
 <p>&ldquo;It&rsquo;s better for minorities when the two parties are competing for them,&rdquo; said Tamar Jacoby, president and CEO of ImmigrationWorks USA, a national federation of small business owners working to promote better immigration laws.  &ldquo;The worst situation is what was true for African Americans for years, when Republicans ignored them and Democrats took them for granted.&rdquo;</p>
 <p>That, analysts say, is a mistake that politicians of both parties cannot afford to repeat with the nation&rsquo;s burgeoning majority minority.</p>';
 
+$why_wrote = '<p>Many Americans, including Democrats and Republicans alike, were surprised by the 2016 Presidential Election results. With this in mind, we wanted to write an article that looked at the changing nature and purpose of political parties in the United States. This story looks at these changes in light of America’s shifting demographic makeup and ever-evolving communication environment.</p>';
+$corrections = '<p>None</p>';
+$who_spoke_to = array(
+    'Taeku Lee, PhD, professor of political science at the University of California, Berkeley.',
+    'David Miller, PhD, political scientist at the American Enterprise Institute.',
+    'Tamar Jacoby, president and CEO of ImmigrationWorks USA.'
+);
+$who_linked_to = array(
+    '<a href="http://polisci.berkeley.edu/">UC Berkeley Political Science Department</a>',
+    '<a href="http://www.immigrationworksusa.org/">ImmigrationWorks USA</a>'
+);
+
 $comments = array(
                 array(
                     'name' => 'Alex',

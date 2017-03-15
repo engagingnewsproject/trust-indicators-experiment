@@ -29,6 +29,18 @@ $article = '<p>PHILADELPHIA &mdash; Experts say a Pennsylvania woman&rsquo;s rec
 <p>&ldquo;I think, for the moment, those in [the fields of] public health and infectious disease will do the worrying for everyone,&rdquo; Schaffner said.</p>
 <p>The most important thing that people can do is to not argue with a doctor if he or she tells you that you don&rsquo;t need antibiotics, Schaffner said. Don&rsquo;t insist on them, he said.</p>';
 
+$why_wrote = '<p>Antibiotics have saved countless lives since the 1940s. However, these drugs have been used so widely and for so long that the infectious organisms the antibiotics are designed to kill have adapted to them, making the drugs less effective. This article was written to highlight this growing danger, raise a warning voice, and showcase the efforts of those working on the frontlines of antibiotic resistance.</p>';
+$corrections = '<p>None</p>';
+$who_spoke_to = array(
+    'Neil Gupta, MD, researcher at the Centers for Disease Control and Prevention.',
+    'William Schaffner, MD, infectious disease specialist at Vanderbilt University School of Medicine.',
+    'Barbara Murray, MD, director of the division of infectious diseases at the University of Texas Health Science Center at Houston.'
+);
+$who_linked_to = array(
+    '<a href="https://www.cdc.gov/">Centers for Disease Control and Prevention</a>',
+    '<a href="https://medschool.vanderbilt.edu/">Vanderbilt University School of Medicine</a>'
+);
+
 $comments = array(
                 array(
                     'name' => 'Alex',

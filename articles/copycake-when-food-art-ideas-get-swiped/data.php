@@ -25,6 +25,18 @@ $article = '<p>SAN FRANCISCO &mdash; Where do you draw the line between inspirat
 <p>As for Freeman, she says she doesn&rsquo;t plan to pursue legal action.</p>
 <p>Complicating all of this is the fact that Corey Lee, the three-Michelin-star chef, is opening a restaurant basically dedicated to cooking the dishes popular at other restaurants while citing them and giving them credit. Of that spot, which has yet to open, he says he&rsquo;s &ldquo;thinking of it as a food exhibition.&rdquo; Since Freeman hasn&rsquo;t gotten SFMOMA to budge, at least yet, maybe she ought to talk to Lee about getting her name on his dessert menu.</p>';
 
+$why_wrote = '<p>Picasso is believed to have said, “good artists copy; great artists steal.” There is a long history of artists borrowing, copying, and yes, even stealing the ideas of other artists. Not only was this story an interesting twist on this notion, with edible art as the focus, but the blurring lines of intellectual property limits portends legal struggles that may have far-reaching implications across a variety of creative industries.</p>';
+$corrections = '<p>None</p>';
+$who_spoke_to = array(
+    'Caitlin Freeman, baker and author of <em>Modern Art Desserts</em>, San Francisco.',
+    'Corey Lee, chef and restaurateur, San Francisco.',
+    'Naomi Beckman-Straus, attorney at Mitchel Silberberg & Knupp, Los Angeles.'
+);
+$who_linked_to = array(
+    '<a href="https://www.sfmoma.org/">SFMOMA</a>',
+    '<a href="http://www.msk.com/">Mitchel Silberberg &amp; Knupp</a>'
+);
+
 $comments = array(
                 array(
                     'name' => 'Alex',
