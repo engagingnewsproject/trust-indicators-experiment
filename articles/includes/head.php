@@ -26,13 +26,6 @@
         <script src="js/html5shiv.js"></script>
     <![endif]-->
 
-
-    <?php
-    // only show analytics if not on dev
-    if(!strpos($current_url, '://dev') && !strpos($current_url, '://localhost')) :
-        include('google-analytics.php');
-    endif;?>
-
 </head>
 
 <body>

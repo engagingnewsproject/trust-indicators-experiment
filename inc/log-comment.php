@@ -6,19 +6,20 @@ require_once('../index.php');
 if ($_POST["comment"])
 {
 		//log results of the poll
-		$log = new CommentLogging($_POST["name"], $_POST["comment"], $_POST["identifier"]);
+		$log = new CommentLogging($_POST["name"], $_POST["comment"], $_POST["user_id"], $_POST["url"]);
 		$log->WriteToFile();
 }
 
 class CommentLogging
 {
 		//define instance variables
-		private $ipAddress, $currTime, $name, $comment, $identifier;
+		private $ipAddress, $currTime, $name, $comment, $user_id;
 
-		function __construct($name, $comment, $identifier)
+		function __construct($name, $comment, $user_id, $url)
 		{
 				//set instance variables
-				$this->identifier = $identifier;
+				$this->user_id = $user_id;
+				$this->url = $url;
 				$this->ipAddress = $this->get_the_ip();
 				$this->currTime = date("m/d/Y g:i:s A",time()-18000);
 				$this->name = str_replace("|", "&#124;", filter_var($name, FILTER_SANITIZE_STRING));
@@ -29,8 +30,8 @@ class CommentLogging
 
 		function WriteToFile() {
 			$logPath = array(
-							$this->rootDir . "/logs/CommentsLogging.csv",
-							$this->rootDir . "/logs/CommentsLogging.txt"
+							$this->rootDir . "/logs/".$this->url.".csv",
+							$this->rootDir . "/logs/".$this->url.".txt"
 						);
 
 			//loop through log files
@@ -38,7 +39,7 @@ class CommentLogging
 			  //open file with append
 				$logFile = fopen($log, 'a') or die("A problem has occurred. Please contact administrator.");
 
-				$logText = $this->identifier . "|" . $this->ipAddress . "|" . $this->currTime . "|" . $this->name . "|" . $this->comment . "\n";
+				$logText = $this->user_id . "|" . $this->ipAddress . "|" . $this->currTime . "|" . $this->name . "|" . $this->comment . "\n";
 
 				//write to file
 				fwrite($logFile, $logText);

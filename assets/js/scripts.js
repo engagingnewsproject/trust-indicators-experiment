@@ -16,6 +16,7 @@ $(document).ready(function() {
 
     var authorBtn = {
         'button': $('.author__button'),
+        'label': 'Author Bio',
         'replaceButton': false,
         'closeLocation': $('.author__name'),
         'content': '',
@@ -26,6 +27,7 @@ $(document).ready(function() {
 
     var bylineBtn = {
         'button': $('.byline__button'),
+        'label': 'Article Type',
         'replaceButton': true,
         'closeLocation': $('.byline__button'),
         'content': 'Learn More',
@@ -48,6 +50,7 @@ $(document).ready(function() {
 
         footnoteBtn = {
             'button': $(this),
+            'label': 'Footnote '+footnoteId,
             'replaceButton': true,
             'content': '<sup>'+footnoteId+'</sup>',
             'closeLocation': $(this),
@@ -61,6 +64,12 @@ $(document).ready(function() {
         if(btn.button.hasClass('accordion--closed')) {
             accordionOpen(btn.button);
             addCloseIcon(btn);
+
+            ga('send', 'event', {
+              eventCategory: btn.label,
+              eventAction: 'open',
+              eventLabel: userID,
+            });
         } else {
             accordionClosed(btn.button);
             removeCloseIcon(btn);
@@ -101,6 +110,7 @@ $(document).ready(function() {
     $(document).on('click', '.accordion__button', function(e) {
         e.preventDefault();
         var btn = $(this).data('btn');
+
         process_accordion(btn);
     });
 
@@ -135,9 +145,8 @@ $(document).ready(function() {
         e.preventDefault();
         $('.show-comments-wrap').remove();
         $('.comments-section').fadeIn();
-        var label = $('#user-ip').attr('data-ip');
         // send to google
-        ga('send','event','Comments', 'Show Comments', label);
+        ga('send','event','Comments', 'Show Comments', userID);
     });
 
 

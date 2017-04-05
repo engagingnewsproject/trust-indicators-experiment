@@ -2,10 +2,11 @@
 $identifier = 'trust';
 $title = 'US Demographic Shift Will Have Huge Political Impact';
 $author = 'Jim Phipps';
-$author_image = '../../dist/img/author-image.jpg';
+$author_image = '../../dist/img/ira-glass.png';
 $pubdate = 'Oct. 23, 2016';
 $article_category = 'News';
 $featured_img = '../../dist/img/people-in-voting-booth.jpg';
+$featured_img_caption = 'Voters at a San Antonio, Texas, polling place during the 2016 election.';
 $footnotes = array(
                     'For an in-depth read on the history and changing roles of American political parties, few books have done it better than <a href="http://www.press.uchicago.edu/ucp/books/book/chicago/W/bo11315021.html">Aldrich’s Why Parties?</a>',
                     '<a href="http://www.pewresearch.org/topics/voter-demography/">The Pew Research Centers</a> provides a constant flow of updated information about voter demographics.'
@@ -28,13 +29,10 @@ $article = '<p>SAN ANTONIO &mdash; In less than 30 years, whites will no longer 
 $why_wrote = '<p>Many Americans, including Democrats and Republicans alike, were surprised by the 2016 Presidential Election results. With this in mind, we wanted to write an article that looked at the changing nature and purpose of political parties in the United States. This story looks at these changes in light of America’s shifting demographic makeup and ever-evolving communication environment.</p>';
 $corrections = '<p>None</p>';
 $who_spoke_to = array(
-    'Taeku Lee, PhD, professor of political science at the University of California, Berkeley.',
-    'David Miller, PhD, political scientist at the American Enterprise Institute.',
-    'Tamar Jacoby, president and CEO of ImmigrationWorks USA.'
-);
-$who_linked_to = array(
-    '<a href="http://polisci.berkeley.edu/">UC Berkeley Political Science Department</a>',
-    '<a href="http://www.immigrationworksusa.org/">ImmigrationWorks USA</a>'
+    'Taeku Lee, PhD, professor of political science at the <a href="http://polisci.berkeley.edu/">University of California, Berkeley</a>.',
+    'David Miller, PhD, political scientist at the <a href="https://www.aei.org/">American Enterprise Institute</a>.',
+    'Tamar Jacoby, president and CEO of <a href="http://www.immigrationworksusa.org/">ImmigrationWorks USA</a>.',
+    'We also spoke to Jamie Cameron (U.S. Census Bureau) and Ramon Gutierrez (UCLA population scientist), who we did not quote in this article, to gain additional information.'
 );
 
 $comments = array(

@@ -6,6 +6,7 @@ $author_image = '../../dist/img/author-image.jpg';
 $pubdate = 'Oct. 23, 2016';
 $article_category = 'News';
 $featured_img = '../../dist/img/e-coli-bacteria.jpg';
+$featured_img_caption = 'The discovery of bacteria that is resistant to our &ldquo;last resort&rdquo; antibiotic means we need new antibiotics. Pictured: E. coli bacteria.';
 $footnotes = array(
                     'Dr. Gupta has done extensive research on the challenges related to CRE</a>, such as his publication on <a href="https://academic.oup.com/cid/article/53/1/60/492128/Carbapenem-Resistant-Enterobacteriaceae">Carbapenem-Resistant Enterobacteriaceae: Epidemiology and Prevention</a>.',
                     'For more information about CRE, you can check out this informative <a href="https://www.cdc.gov/hai/organisms/cre/">page on Carbapenem-resistant Enterobacteriaceae in Healthcare Settings from the Centers for Disease Control and Prevention</a>.'
@@ -32,13 +33,10 @@ $article = '<p>PHILADELPHIA &mdash; Experts say a Pennsylvania woman&rsquo;s rec
 $why_wrote = '<p>Antibiotics have saved countless lives since the 1940s. However, these drugs have been used so widely and for so long that the infectious organisms the antibiotics are designed to kill have adapted to them, making the drugs less effective. This article was written to highlight this growing danger, raise a warning voice, and showcase the efforts of those working on the frontlines of antibiotic resistance.</p>';
 $corrections = '<p>None</p>';
 $who_spoke_to = array(
-    'Neil Gupta, MD, researcher at the Centers for Disease Control and Prevention.',
-    'William Schaffner, MD, infectious disease specialist at Vanderbilt University School of Medicine.',
-    'Barbara Murray, MD, director of the division of infectious diseases at the University of Texas Health Science Center at Houston.'
-);
-$who_linked_to = array(
-    '<a href="https://www.cdc.gov/">Centers for Disease Control and Prevention</a>',
-    '<a href="https://medschool.vanderbilt.edu/">Vanderbilt University School of Medicine</a>'
+    'Neil Gupta, MD, researcher at the <a href="https://www.cdc.gov/">Centers for Disease Control and Prevention</a>.',
+    'William Schaffner, MD, infectious disease specialist at <a href="https://medschool.vanderbilt.edu/">Vanderbilt University School of Medicine</a>.',
+    'Barbara Murray, MD, director of the division of infectious diseases at the <a href="https://www.uth.edu/">University of Texas Health Science Center at Houston</a>.',
+    'We also spoke to Jamie Cameron (National Institutes of Health) and Ramon Gutierrez (UCLA epidemiologist), who we did not quote in this article, to gain additional information.'
 );
 
 $comments = array(

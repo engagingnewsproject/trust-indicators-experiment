@@ -3,14 +3,14 @@ $(document).ready(function(){
   $("#submit-comment").click(function(event) {
     var commenter_name = $("#commenter-name").val();
     var new_comment = $("#commenter-comment").val();
-    var identifier = $("#comment-identifier").val();
-    var label = $('#user-ip').attr('data-ip');
+    var url = pageTitle;
+    var label = userID;
 
     if (commenter_name.length > 0 && new_comment.length > 0 ) {
-      submitComment(commenter_name, new_comment, identifier);
+      submitComment(commenter_name, new_comment, label);
       appendComment(commenter_name, new_comment);
       // send to google
-      ga('send','event','Comments', 'Add Comment', label);
+      ga('send', 'event','Comments', 'Add Comment', label);
 
     } else {
       submitCommentError();
@@ -24,7 +24,7 @@ $(document).ready(function(){
   });
 
 
-  function submitComment(name, comment, identifier) {
+  function submitComment(name, comment, identifier, url) {
     var myDate = new Date();
     // TODO format date
     //var displayDate = (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
@@ -38,7 +38,7 @@ $(document).ready(function(){
 			type: "POST",
 			url: "../../inc/log-comment.php",
 			dataType: "json",
-			data: { comment : comment,  name : name, identifier : identifier }
+			data: { comment : comment,  name : name, identifier : identifier, url: url}
 		})
   }
 

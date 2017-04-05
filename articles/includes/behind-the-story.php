@@ -14,11 +14,4 @@
     <h3>Corrections</h3>
     <?php echo $corrections;?>
 
-    <h3>Who we linked to</h3>
-    <ul>
-        <?php foreach($who_linked_to as $who) {
-            echo "<li>$who</li>";
-        }?>
-    </ul>
-
 </section>

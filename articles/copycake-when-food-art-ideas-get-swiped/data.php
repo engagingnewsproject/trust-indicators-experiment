@@ -6,6 +6,7 @@ $author_image = '../../dist/img/author-image.jpg';
 $pubdate = 'Oct. 23, 2016';
 $article_category = 'News';
 $featured_img = '../../dist/img/new-oculus-cake.jpg';
+$featured_img_caption = 'This cake, resembling the San Francisco Museum of Modern Art&rsquo;s distinctive tower, is currently for sale at the museum cafe and is similar in design to one prepared several years ago by Caitlin Freeman.';
 $footnotes = array(
                     '<a href="http://www.modernartdesserts.com/">Ms. Freeman has a blog</a> that details how her creations came to life.',
                     'This is not the first time Ms. Beckman-Straus has put her legal expertise to use in the food world. Read <a href="http://www.eater.com/2012/12/11/6509773/intellectual-property-lawyer-naomi-straus-on-how-chefs-can-protect">a fascinating Q&A she did with Eater magazine</a>.'
@@ -28,13 +29,9 @@ $article = '<p>SAN FRANCISCO &mdash; Where do you draw the line between inspirat
 $why_wrote = '<p>Picasso is believed to have said, “good artists copy; great artists steal.” There is a long history of artists borrowing, copying, and yes, even stealing the ideas of other artists. Not only was this story an interesting twist on this notion, with edible art as the focus, but the blurring lines of intellectual property limits portends legal struggles that may have far-reaching implications across a variety of creative industries.</p>';
 $corrections = '<p>None</p>';
 $who_spoke_to = array(
-    'Caitlin Freeman, baker and author of <em>Modern Art Desserts</em>, San Francisco.',
-    'Corey Lee, chef and restaurateur, San Francisco.',
-    'Naomi Beckman-Straus, attorney at Mitchel Silberberg & Knupp, Los Angeles.'
-);
-$who_linked_to = array(
-    '<a href="https://www.sfmoma.org/">SFMOMA</a>',
-    '<a href="http://www.msk.com/">Mitchel Silberberg &amp; Knupp</a>'
+    'Caitlin Freeman, baker and author of <a href="http://www.modernartdesserts.com/"><em>Modern Art Desserts</em></a>, San Francisco.',
+    '<a href="http://sf.eater.com/corey-lee">Corey Lee</a>, chef and restaurateur, San Francisco.',
+    'Naomi Beckman-Straus, attorney at <a href="http://www.msk.com/">Mitchel Silberberg & Knupp</a>, Los Angeles.'
 );
 
 $comments = array(

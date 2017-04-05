@@ -23,12 +23,16 @@
             <?php include('author-bio.php');?>
         </header>
 
-        <img class="article-img article-img--featured" src="<?php echo $featured_img;?>" />
+        <figure class="featured-image">
+            <img class="article-img article-img--featured" src="<?php echo $featured_img;?>" />
+            <figcaption><?php echo $featured_img_caption;?></figcaption>
+        </figure>
 
         <? echo $article;?>
 
         <?php
         if($identifier === 'trust') {
+            include('trust-project-callout.php');
             include('behind-the-story.php');
         }
 
