@@ -61,11 +61,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function() {
-    var closedElements = ['footnote', 'byline', 'author'];
+    var closedElements = ['footnote', 'category', 'author'];
 
-    // add in learn more byline button
-    $('.byline__category').after('<button class="byline__button">Learn More</button>');
-    $('.byline__content').append('<button class="byline__second-close accordion__second-close">'+svgClose()+' Close Section</button>');
+    // add in learn more category button
+    $('.category__type').after('<button class="category__button">Learn More</button>');
+    $('.category__content').append('<button class="category__second-close accordion__second-close">'+svgClose()+' Close Section</button>');
+    $('.author__content').before('<button id="authorBtn" class="author__button">Read Bio</button>');
     $('.author__content').append('<button class="author__second-close accordion__second-close">'+svgClose()+' Close Section</button>');
 
     for(var i = 0; i < closedElements.length; i++) {
@@ -79,24 +80,24 @@ $(document).ready(function() {
     var authorBtn = {
         'button': $('.author__button'),
         'label': 'Author Bio',
-        'replaceButton': false,
-        'closeLocation': $('.author__name'),
-        'content': '',
+        'replaceButton': true,
+        'closeLocation': $('.author__button'),
+        'content': 'Read Bio',
     };
 
     $('.author__button').data('btn', authorBtn);
     $('.author__second-close').data('btn', authorBtn);
 
-    var bylineBtn = {
-        'button': $('.byline__button'),
+    var categoryBtn = {
+        'button': $('.category__button'),
         'label': 'Article Type',
         'replaceButton': true,
-        'closeLocation': $('.byline__button'),
+        'closeLocation': $('.category__button'),
         'content': 'Learn More',
     };
 
-    $('.byline__button').data('btn', bylineBtn);
-    $('.byline__second-close').data('btn', bylineBtn);
+    $('.category__button').data('btn', categoryBtn);
+    $('.category__second-close').data('btn', categoryBtn);
 
     var footnoteBtn = {
         'button': '',
@@ -210,10 +211,5 @@ $(document).ready(function() {
         // send to google
         ga('send','event','Comments', 'Show Comments', userID);
     });
-
-
-
-
-
 
 });

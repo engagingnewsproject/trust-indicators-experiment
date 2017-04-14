@@ -1,19 +1,15 @@
-@include accordion('byline');
+@include accordion('category');
 
-.byline {
-    text-align: center;
-    color: lighten($font, 12.5);
+.category__type {
+    font-size: 1rem;
 }
 
-.byline__category {
-    color: #000;
-}
-
-.byline__button {
+.category__button {
     @include no-button;
+    font-size: 0.8rem;
 }
 
-.byline__content {
+.category__content {
     text-align: left;
 
     p {

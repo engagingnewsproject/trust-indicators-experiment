@@ -7,55 +7,6 @@ header[role="banner"] {
     border-bottom: 2px solid $font;
 }
 
-.trust-project {
-
-    margin: $spacing__base 0 $spacing__base/2;
-
-    @include media($tablet) {
-        margin-left: $spacing__base;
-        margin-right: $spacing__base;
-    }
-
-
-    a {
-
-        .trust-project__title {
-            color: $link;
-        }
-
-        .icon {
-            fill: $link;
-        }
-
-        &:hover {
-            .trust-project__title {
-                color: $link_hover;
-            }
-
-            .icon {
-                fill: $link_hover;
-            }
-        }
-    }
-}
-
-.trust-project__title {
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    width: 20px;
-    margin: 0;
-    position: relative;
-    top: 0.65em;
-}
-
-.icon--trust-project {
-    font-size: 2.2rem;
-    float: left;
-    margin-right: $spacing__base / 4;
-    top: 0;
-}
-
 .about-trust-project {
     .article__header {
         margin-top: $spacing__base;
