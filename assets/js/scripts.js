@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     var closedElements = ['footnote', 'category', 'author'];
 
     // add in learn more category button
@@ -44,6 +45,18 @@ $(document).ready(function() {
         'content': '',
     };
 
+    // track all link clicks
+    $(document).on('click', 'a', function(e) {
+         e.preventDefault();
+         url = $(this).attr('href');
+         linkText = $.trim($(this).text());
+         linkText = linkText.replace(/\r?\n|\r/g, " ");
+         // if there's multiple spaces, condense them
+         linkText = linkText.replace(/\s\s\s/g, "");
+         logClick('Link: '+ linkText, url);
+         window.location.href = url;
+    });
+
 
     // loop through footnotes and create their variables
     $('.footnote__button').each(function(i) {
@@ -71,9 +84,12 @@ $(document).ready(function() {
               eventAction: 'open',
               eventLabel: userID,
             });
+
+            logClick(btn.label, 'Opened');
         } else {
             accordionClosed(btn.button);
             removeCloseIcon(btn);
+            logClick(btn.label, 'Closed');
         }
     }
 
@@ -113,6 +129,7 @@ $(document).ready(function() {
         var btn = $(this).data('btn');
 
         process_accordion(btn);
+
     });
 
     $(document).on('click', '.accordion__second-close', function(e) {
@@ -137,17 +154,98 @@ $(document).ready(function() {
         e.addClass('accordion--open');
     }
 
-    // hide comments on page load
-    if($('.comments-section').length) {
-        $('.comments-section').hide();
+    function log(action, label, comment) {
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('POST', '../../inc/class.log.php');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // alert('Something went wrong.  Name is now ' + xhr.responseText);
+                // xhr.send(encodeURI('log=' +logContent ));
+            }
+            else if (xhr.status !== 200) {
+                alert('Request failed.  Returned status of ' + xhr.status);
+            }
+        };
+        xhr.send(encodeURI('log=true&user_id='+userID+'&action='+action+'&comment='+comment+'&label='+label+'&url='+window.location.href));
     }
 
-    $('.show-comments').click(function(e){
-        e.preventDefault();
-        $('.show-comments-wrap').remove();
-        $('.comments-section').fadeIn();
+    // label == what it is
+    function logClick(label, comment) {
+        var action = 'click';
+        log(action, label, comment);
+    }
+
+    // capture page load
+    log('Page View', pageTitle, 'Loaded');
+
+
+    /////////////////
+    /// Comments ///
+    ////////////////
+
+    $("#submit-comment").click(function(event) {
+      var commenter_name = $("#commenter-name").val();
+      var new_comment = $("#commenter-comment").val();
+      var url = pageTitle;
+      var label = userID;
+
+      if (commenter_name.length > 0 && new_comment.length > 0 ) {
+        submitComment(commenter_name, new_comment, label);
+        appendComment(commenter_name, new_comment);
         // send to google
-        ga('send','event','Comments', 'Show Comments', userID);
+        ga('send', 'event','Comments', 'Add Comment', label);
+
+
+      } else {
+        submitCommentError();
+        // var commenter_position = ".support";
+        // send to google
+        ga('send','event','Comments', 'Add Comment Error', label);
+
+      }
+
+      // var commenter_position = ".support";
+      event.preventDefault();
     });
+
+
+    function submitComment(name, comment, identifier, url) {
+      var myDate = new Date();
+      // TODO format date
+      //var displayDate = (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
+
+      $(".new-comment").replaceWith('<div class="alert alert-success">Thanks for your comment!</div>');
+
+
+      //IP|datetime|type|comment|name
+      //10.1.1.1|nov 14th 5pm|comment|this is a new comment|john doe
+      log('Comment', 'Add Comment', name+ ': '+comment);
+      $.ajax({
+  			type: "POST",
+  			url: "../../inc/log-comment.php",
+  			dataType: "json",
+  			data: { comment : comment,  name : name, identifier : identifier, url: url}
+  		});
+    }
+
+    function submitCommentError() {
+      $('.alert-error').remove();
+      $(".new-comment").append("<div class='alert alert-error'>* Please enter your name and a comment.</div>");
+      log('Comment', 'Add Comment', 'Add Comment Error');
+    }
+
+    function appendComment(commenter_name, new_comment) {
+      var comment;
+
+      newComment = $('.comment:eq(0)').clone();
+      newComment.find('.comment-name').text(commenter_name);
+      newComment.find('.comment-time').text('Now');
+      new_comment = new_comment.replace(/(?:\r\n|\r|\n)/g, '<br />');
+      newComment.find('.comment-content').html(new_comment);
+
+      newComment.hide().appendTo('.comments').fadeIn();
+    }
 
 });

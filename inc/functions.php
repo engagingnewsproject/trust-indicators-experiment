@@ -34,7 +34,12 @@ function svg($name, $options = array('title'=>false,'class'=>false)) {
 
 
 function get_current_url() {
-	return "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+	if($_SERVER[HTTP_HOST] === 'dev') {
+		$http = 'http';
+	} else {
+		$http = 'https';
+	}
+	return "$http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 }
 
 function social_share($id) {

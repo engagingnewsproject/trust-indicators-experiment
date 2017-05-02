@@ -4,7 +4,7 @@ $title = 'Copycake: When Food Art Ideas Get Swiped';
 $author = 'Jim Phipps';
 $author_image = '../../dist/img/author-image.jpg';
 $pubdate = 'Oct. 23, 2016';
-$article_category = 'News';
+$article_category = 'Analysis';
 $featured_img = '../../dist/img/new-oculus-cake.jpg';
 $featured_img_caption = 'This cake, resembling the San Francisco Museum of Modern Art&rsquo;s distinctive tower, is currently for sale at the museum cafe and is similar in design to one prepared several years ago by Caitlin Freeman.';
 $footnotes = array(
@@ -33,18 +33,10 @@ $who_spoke_to = array(
     '<a href="http://sf.eater.com/corey-lee">Corey Lee</a>, chef and restaurateur, San Francisco.',
     'Naomi Beckman-Straus, attorney at <a href="http://www.msk.com/">Mitchel Silberberg & Knupp</a>, Los Angeles.'
 );
+$where_written = '<p>This story was written on assignment in San Francisco, California</p>';
+$editor = '<p>Marlene Bryant, arts editor at <em>The News Beat</em></p>';
+$version_history = '<p>There are no older versions of this story.</p>';
 
-$comments = array(
-                array(
-                    'name' => 'Alex',
-                    'time' => '10 minutes ago',
-                    'comment' => '<p>You cannot be considered rich until you have a net-worth. Poor people have a hard time holding onto any assets or cash. For many it&#8217;s their own poor choices that make them poor. For others it&#8217;s the lack of motivation to pull themselves up. Others that are highly motivated work very hard, just to find themselves at the bottom still. The trouble with the system, is a person with zero assets has a harder time getting funding for a business pursuit as oppose to a millionaire that the banks and lenders are more willing to loan to.</p>'
-                ),
-                array(
-                    'name' => 'Katie',
-                    'time' => '12 minutes ago',
-                    'comment' => '<p>Appreciate the fact that this article considers the structural problems within the economy, barriers that make it difficult to get ahead. Such a travesty so many are unbanked & rely on the Payday loan operations. So tired of seeing payday loan shops, pawn shops & title loan businesses in every strip mall &amp; clogging up the small claims courts.</p>'
-                ),
-            );
+$comments = array();
 
 ?>

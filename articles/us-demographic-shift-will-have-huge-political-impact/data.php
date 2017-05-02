@@ -2,16 +2,16 @@
 $identifier = 'trust';
 $title = 'US Demographic Shift Will Have Huge Political Impact';
 $author = 'Jim Phipps';
-$author_image = '../../dist/img/ira-glass.png';
+$author_image = '../../dist/img/author-image.jpg';
 $pubdate = 'Oct. 23, 2016';
-$article_category = 'News';
+$article_category = 'Analysis';
 $featured_img = '../../dist/img/people-in-voting-booth.jpg';
-$featured_img_caption = 'Voters at a San Antonio, Texas, polling place during the 2016 election.';
+$featured_img_caption = 'Voters at a San Francisco, California, polling place during the 2016 election.';
 $footnotes = array(
                     'For more on how U.S. political parties paid people to vote – a practice known as “vote buying” – see this <a href="http://journals.sagepub.com/doi/abs/10.1177/0010414016628268">recent study from Aidt and Jensen</a>.',
                     'One such analysis comes from the Pew Research Center and <a href="http://www.pewresearch.org/fact-tank/2016/07/15/the-economy-is-a-top-issue-for-latinos-and-theyre-more-upbeat-about-it/">a recent study of Latino voters</a>.'
              );
-$article = '<p>SAN ANTONIO &mdash; In less than 30 years, whites will no longer be the racial majority in the United States. Hispanics, African Americans and Asians – the country&rsquo;s three largest minority groups – will outnumber whites. This shift will have important implications for the nation&rsquo;s politics. Among these wide-ranging implications, perhaps none will be as significant as the evolving influence of political parties on the hearts and minds of American voters.</p>
+$article = '<p>SAN FRANCISCO &mdash; In less than 30 years, whites will no longer be the racial majority in the United States. Hispanics, African Americans and Asians – the country&rsquo;s three largest minority groups – will outnumber whites. This shift will have important implications for the nation&rsquo;s politics. Among these wide-ranging implications, perhaps none will be as significant as the evolving influence of political parties on the hearts and minds of American voters.</p>
 <p>At the turn of the 20th century, political parties in the United States were strong institutions that mobilized immigrant groups around core issues.  The political machines of both major parties – the Democrats and the Republicans – made sure that voters turned out on Election Day.</p>
 <p>Sometimes party workers even took immigrants to the polls and, on occasion, illegally paid them to vote.'.footnote(1,$footnotes).' But with the rise of mass communications – radio, television and the Internet – candidates themselves have been able to reach out to voters directly, weakening the role of parties in the United States.</p>
 <p>As this trend continues, analysts say, minorities increasingly will need to be self-motivated to cast their ballots.</p>
@@ -34,18 +34,10 @@ $who_spoke_to = array(
     'Tamar Jacoby, president and CEO of <a href="http://www.immigrationworksusa.org/">ImmigrationWorks USA</a>.',
     'We also spoke to Jamie Cameron (U.S. Census Bureau) and Ramon Gutierrez (UCLA population scientist), who we did not quote in this article, to gain additional information.'
 );
+$where_written = '<p>This story was written on assignment in San Francisco, California</p>';
+$editor = '<p>Marlene Bryant, politics editor at <em>The News Beat</em></p>';
+$version_history = '<p>There are no older versions of this story.</p>';
 
-$comments = array(
-                array(
-                    'name' => 'Alex',
-                    'time' => '10 minutes ago',
-                    'comment' => '<p>You cannot be considered rich until you have a net-worth. Poor people have a hard time holding onto any assets or cash. For many it&#8217;s their own poor choices that make them poor. For others it&#8217;s the lack of motivation to pull themselves up. Others that are highly motivated work very hard, just to find themselves at the bottom still. The trouble with the system, is a person with zero assets has a harder time getting funding for a business pursuit as oppose to a millionaire that the banks and lenders are more willing to loan to.</p>'
-                ),
-                array(
-                    'name' => 'Katie',
-                    'time' => '12 minutes ago',
-                    'comment' => '<p>Appreciate the fact that this article considers the structural problems within the economy, barriers that make it difficult to get ahead. Such a travesty so many are unbanked & rely on the Payday loan operations. So tired of seeing payday loan shops, pawn shops & title loan businesses in every strip mall &amp; clogging up the small claims courts.</p>'
-                ),
-            );
+$comments = array();
 
 ?>

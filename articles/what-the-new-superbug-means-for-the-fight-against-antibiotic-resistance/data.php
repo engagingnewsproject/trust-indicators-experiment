@@ -4,14 +4,14 @@ $title = 'What The New Superbug Means For The Fight Against Antibiotic Resistanc
 $author = 'Jim Phipps';
 $author_image = '../../dist/img/author-image.jpg';
 $pubdate = 'Oct. 23, 2016';
-$article_category = 'News';
+$article_category = 'Analysis';
 $featured_img = '../../dist/img/e-coli-bacteria.jpg';
 $featured_img_caption = 'The discovery of bacteria that is resistant to our &ldquo;last resort&rdquo; antibiotic means we need new antibiotics. Pictured: E. coli bacteria.';
 $footnotes = array(
                     'For a detailed description of <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4462593/">how colistin functions as the primary treatment option for CRE, please see this report</a> recently published in a leading infectious disease journal.',
                     'A team from Johns Hopkins University published a study explaining <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3416487/">how drug combinations could be effective in combating potential infections</a> like colistin-resistant CRE.'
              );
-$article = '<p>PHILADELPHIA &mdash; Experts say a Pennsylvania woman&rsquo;s recent case of an antibiotic-resistant infection shows the urgency for new antibiotics.</p>
+$article = '<p>SAN FRANCISCO &mdash; Experts say a Pennsylvania woman&rsquo;s recent case of an antibiotic-resistant infection shows the urgency for new antibiotics.</p>
 <p>In the case, the E. coli bacteria causing the 49-year-old woman&rsquo;s urinary tract infection were found in lab testing to be resistant to an antibiotic called colistin. Doctors consider colistin a &ldquo;last resort&rdquo; drug — it can have serious side effects, such as kidney damage, so it is used only when other antibiotics do not work.</p>
 <p>Currently, colistin is mainly used to treat people infected with a type of bacteria called CRE, or carbapenem-resistant enterobacteriaceae.'.footnote(1,$footnotes).' E. coli is one type of enterobacteria, though not all E. coli strains have acquired resistance to carbapenem.</p>
 <p>Infections caused by CRE have limited treatment options and have been associated with high mortality rates, according to a report by Neil Gupta, MD, and his team at the Centers for Disease Control and Prevention.</p>
@@ -38,18 +38,10 @@ $who_spoke_to = array(
     'Barbara Murray, MD, director of the division of infectious diseases at the <a href="https://www.uth.edu/">University of Texas Health Science Center at Houston</a>.',
     'We also spoke to Jamie Cameron (National Institutes of Health) and Ramon Gutierrez (UCLA epidemiologist), who we did not quote in this article, to gain additional information.'
 );
+$where_written = '<p>This story was written on assignment in San Francisco, California</p>';
+$editor = '<p>Marlene Bryant, science editor at <em>The News Beat</em></p>';
+$version_history = '<p>There are no older versions of this story.</p>';
 
-$comments = array(
-                array(
-                    'name' => 'Alex',
-                    'time' => '10 minutes ago',
-                    'comment' => '<p>You cannot be considered rich until you have a net-worth. Poor people have a hard time holding onto any assets or cash. For many it&#8217;s their own poor choices that make them poor. For others it&#8217;s the lack of motivation to pull themselves up. Others that are highly motivated work very hard, just to find themselves at the bottom still. The trouble with the system, is a person with zero assets has a harder time getting funding for a business pursuit as oppose to a millionaire that the banks and lenders are more willing to loan to.</p>'
-                ),
-                array(
-                    'name' => 'Katie',
-                    'time' => '12 minutes ago',
-                    'comment' => '<p>Appreciate the fact that this article considers the structural problems within the economy, barriers that make it difficult to get ahead. Such a travesty so many are unbanked & rely on the Payday loan operations. So tired of seeing payday loan shops, pawn shops & title loan businesses in every strip mall &amp; clogging up the small claims courts.</p>'
-                ),
-            );
+$comments = array();
 
 ?>

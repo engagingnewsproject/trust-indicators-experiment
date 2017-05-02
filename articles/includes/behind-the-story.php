@@ -11,7 +11,18 @@
         }?>
     </ul>
 
+    <h3>Where this story was written</h3>
+    <?php echo $where_written;?>
+
+    <h3>Who edited this story</h3>
+    <?php echo $editor;?>
+
     <h3>Corrections</h3>
     <?php echo $corrections;?>
+
+    <h3>Version History</h3>
+    <?php echo $version_history;?>
+
+    <p>This story was researched, written, and published in accordance with The News Beat’s best practices.</p>
 
 </section>
