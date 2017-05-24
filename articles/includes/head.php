@@ -26,6 +26,10 @@
         <script src="js/html5shiv.js"></script>
     <![endif]-->
 
+    <script>
+        var studyType = '<? echo $identifier;?>';
+    </script>
+
 </head>
 
 <body>

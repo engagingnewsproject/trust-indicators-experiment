@@ -76,6 +76,18 @@ function footnote($number, $footnotes) {
 }
 
 /**
+* Removes footnotes from string
+*/
+function remove_footnotes($footnotes, $article) {
+	$i=1;
+	foreach ($footnotes as $footnote) {
+	    $article = str_replace(footnote($i,$footnotes), '', $article);
+	    $i++;
+	}
+	return $article;
+}
+
+/**
 * An internal navigation used on the About the Trust Project page
 */
 function internal_nav() {

@@ -173,7 +173,7 @@ $(document).ready(function() {
                 alert('Request failed.  Returned status of ' + xhr.status);
             }
         };
-        xhr.send(encodeURI('log=true&user_id='+userID+'&action='+action+'&comment='+comment+'&label='+label+'&url='+window.location.href));
+        xhr.send(encodeURI('log=true&identifier='+studyType+'&user_id='+userID+'&action='+action+'&comment='+comment+'&label='+label+'&url='+window.location.href));
     }
 
     // label == what it is
