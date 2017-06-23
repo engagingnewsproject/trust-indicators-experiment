@@ -12,7 +12,7 @@
     <ul class="author__facts">
         <li>
             <h4>Contact details</h4>
-            <p>jimphipps@thenewsbeat.com</p>
+            <p>jimphipps@thenewsbeat.org</p>
         </li>
         <li>
             <h4>Location</h4>
