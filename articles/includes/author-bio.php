@@ -8,16 +8,23 @@
             <li>Bridging the Political Divide with Art</li>
             <li>Q &amp; A with Trump’s Science Advisor</li>
         </ul>
-
-        <h4>Contact details</h4>
-        <p>jimphipps@thenewsbeat.com</p>
     </div>
-    <div class="author__facts">
-        <h4>Location</h4>
-        <p>New York, NY</p>
-        <h4>Languages spoken</h4>
-        <p>English, some Spanish</p>
-        <h4>Areas of expertise</h4>
-        <p>U.S. politics, science, art</p>
-    </div>
+    <ul class="author__facts">
+        <li>
+            <h4>Contact details</h4>
+            <p>jimphipps@thenewsbeat.com</p>
+        </li>
+        <li>
+            <h4>Location</h4>
+            <p>New York, NY</p>
+        </li>
+        <li>
+            <h4>Languages spoken</h4>
+            <p>English, some Spanish</p>
+        </li>
+        <li>
+            <h4>Areas of expertise</h4>
+            <p>U.S. politics, science, art</p>
+        </li>
+    </ul>
 </section>

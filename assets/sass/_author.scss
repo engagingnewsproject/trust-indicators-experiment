@@ -55,11 +55,6 @@
 
     margin-top: $spacing__base * 0.6;
 
-    @include media($tablet) {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     p, ul {
         font-size: 0.85rem;
     }
@@ -79,23 +74,31 @@
 }
 
 .author__facts {
+    margin-top: $spacing__base;
+    list-style: none;
+    margin-left: 0;
+    margin-bottom: 0;
+
     @include media($tablet) {
-        width: 30%;
-        margin-left: 6%;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    p {
+    li {
         margin-bottom: $spacing__base/2;
+
+        @include media($tablet) {
+            width: 47%;
+
+            &:nth-child(2n+0) {
+                margin-right: 6%;
+            }
+        }
     }
+
 
 }
 
 .author__bio {
     margin-bottom: $spacing__base / 2;
-
-    @include media($tablet) {
-        width: 64%;
-        margin-bottom: 0;
-    }
-
 }
