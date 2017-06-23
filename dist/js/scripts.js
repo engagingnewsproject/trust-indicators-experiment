@@ -198,7 +198,6 @@ $(document).ready(function() {
 
       if (commenter_name.length > 0 && new_comment.length > 0 ) {
         submitComment(commenter_name, new_comment, label);
-        appendComment(commenter_name, new_comment);
         // send to google
         ga('send', 'event','Comments', 'Add Comment', label);
 
@@ -217,22 +216,9 @@ $(document).ready(function() {
 
 
     function submitComment(name, comment, identifier, url) {
-      var myDate = new Date();
-      // TODO format date
-      //var displayDate = (myDate.getMonth()+1) + '/' + (myDate.getDate()) + '/' + myDate.getFullYear();
-
       $(".new-comment").replaceWith('<div class="alert alert-success">Thanks for your comment!</div>');
 
-
-      //IP|datetime|type|comment|name
-      //10.1.1.1|nov 14th 5pm|comment|this is a new comment|john doe
       log('Comment', 'Add Comment', name+ ': '+comment);
-      $.ajax({
-  			type: "POST",
-  			url: "../../inc/log-comment.php",
-  			dataType: "json",
-  			data: { comment : comment,  name : name, identifier : identifier, url: url}
-  		});
     }
 
     function submitCommentError() {
@@ -241,16 +227,67 @@ $(document).ready(function() {
       log('Comment', 'Add Comment', 'Add Comment Error');
     }
 
-    function appendComment(commenter_name, new_comment) {
-      var comment;
 
-      newComment = $('.comment:eq(0)').clone();
-      newComment.find('.comment-name').text(commenter_name);
-      newComment.find('.comment-time').text('Now');
-      new_comment = new_comment.replace(/(?:\r\n|\r|\n)/g, '<br />');
-      newComment.find('.comment-content').html(new_comment);
+    /////////////////
+    /// Feedback ///
+    ////////////////
 
-      newComment.hide().appendTo('.comments').fadeIn();
+    $("#submit-feedback").click(function(event) {
+      event.preventDefault();
+
+      var name = $("#feedback-name").val();
+      var feedback = $("#feedback-comment").val();
+
+      if (name.length > 0 && feedback.length > 0 ) {
+        submitFeedback(name, feedback);
+      } else {
+        submitFeedbackError();
+      }
+    });
+
+
+    function submitFeedback(name, feedback) {
+      $(".feedback").replaceWith('<div class="alert alert-success">Thanks for your feedback!</div>');
+
+      log('Feedback', 'Add Feedback', name+ ': '+feedback);
+
+    }
+
+    function submitFeedbackError() {
+      $('.alert-error').remove();
+      $(".feedback").append("<div class='alert alert-error'>* Please enter your name and feedback.</div>");
+      log('Feedback', 'Add Feedback', 'Add Feedback Error');
+    }
+
+
+    /////////////////////////
+    /// Report Error Form ///
+    /////////////////////////
+
+    $("#submit-error").click(function(event) {
+      event.preventDefault();
+
+      var errorComment = $("#report-error-comment").val();
+
+      if (errorComment.length > 0 ) {
+        submitReportError(errorComment);
+      } else {
+        submitReportErrorError();
+      }
+    });
+
+
+    function submitReportError(errorComment) {
+      $(".report-error").replaceWith('<div class="alert alert-success">Thanks for reporting an error!</div>');
+
+      log('Report Error', 'Add Report Error', errorComment);
+
+    }
+
+    function submitReportErrorError() {
+      $('.alert-error').remove();
+      $(".report-error").append("<div class='alert alert-error'>* Please enter your error to report.</div>");
+      log('Report Error', 'Add Report Error', 'Add Report Error Error');
     }
 
 });

@@ -98,22 +98,34 @@ include('../includes/header.php');
         <p>You are a frontline witness to life here in this area – public safety, politics, housing, social movements, schools, culture – and your insights can help shape our news agenda. <a href="#feedback">We invite your comments and complaints on news stories, suggestions for issues and events to cover or sources to consult</a>, and your participation in our policy conversations and town hall meetings that follow news developments. We believe that news organizations have a responsibility to engage with the public on the values, issues and ideas of the day, and that we have much to gain in return.</p>
 
         <?php echo internal_nav();?>
+
+        <section id="feedback" class="well">
+            <h3>Leave Feedback</h3>
+
+            <form class="feedback">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="feedback-name" placeholder="Enter Name" value="" >
+
+                <label for="feedback">Feedback</label>
+                <textarea rows="3" name="feedback" id="feedback-comment" placeholder="Enter Feedback"></textarea>
+
+                <input id="submit-feedback" type="button" class="btn btn-submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="report-error" class="well">
+            <h3>Report an Error</h3>
+            <form class="report-error">
+                <label for="report-error-comment">Report an Error</label>
+                <textarea rows="3" name="report-error-comment" id="report-error-comment" placeholder="What error(s) did you find?"></textarea>
+
+                <input id="submit-error" type="button" class="btn btn-submit" value="Submit">
+            </form>
+        </section>
     </article>
 </main>
 
-<section id="feedback">
-    <h3>Leave Feedback</h3>
 
-    <form class="feedback">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter Name" value="" >
-        <label for="comment">Comment</label>
-
-        <textarea rows="3" name="feedback" id="feedback" placeholder="Enter Feedback"></textarea>
-
-        <input id="submit-comment" type="button" class="btn btn-submit" value="Submit">
-    </form>
-</section>
 
 <section id="report-error">
     <form>
